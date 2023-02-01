@@ -1,4 +1,4 @@
-colors=[]
+mycolors=[]
 "green"
 "blue"
 "purple"
