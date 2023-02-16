@@ -16,5 +16,5 @@ print("cost per class;", cost_per_class)
 
 #Part B
 yummythings=["cookies", "cupcakes", "muffins", "cakes", "bread"]
-randomyummythings= random.choice(yummythings)
-print(randomyummythings)
+another_variable= random.choice(yummythings)
+print(another_variable)
