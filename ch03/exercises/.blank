@@ -55,3 +55,30 @@ for i in range(num+1):
         # else: error
         print ("buzz")
 
+
+# simon says
+import pygame
+pygame.inint()
+screen = pygame.display.set_mode()
+colors= ["red", "green", "blue", "yellow"]
+random.shuffle(colors)
+for colors in colors:
+    screen.fill(color)
+    pygame.display.fip()
+    pygame.time.wait(1000)
+    screen.fill("black")
+    pygame.disply.flip()
+    pygame.time.wait(250)
+    
+    message = " " 
+    Simon says:
+    Up: RED
+
+    response = input(message)
+    #pygame. EVENT_OBJECT
+    user_sequence = []
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+
+
+
