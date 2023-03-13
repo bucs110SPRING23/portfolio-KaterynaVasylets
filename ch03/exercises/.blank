@@ -1,0 +1,84 @@
+print(x == y) # equality, ==
+boolean equality test, = is assignment
+print()
+# or - st least one True
+print(True or True) #true
+print(True or True) #true
+print(True or True) #true
+print(True or True) #false
+# not - negaion
+print(not True) #false
+print ("apple" == apple")
+print ("apple" < "Apple Pie")
+print (od ("a"), ord ("A")))
+print(1 is int)
+mynums = [1,2,3,4,5,6,7]
+print (1 in mynums)
+print (10 in mynums)
+a = int(input("num:"))
+if a < 0: #colon
+    a= abs(a) #de-indentation to end the if statement
+    # else: #no condiiton, always optional
+    # print ("positive")
+    # print(a) 
+    
+    #elif
+    #alwasy goes between the if and else
+    # is optional, and can have as many as you like
+    a = int(output("num:"))
+if a > 10:
+    print ("x is greaer than 5")
+elif  a > 10:
+print ("x is greater than 10")
+else:
+print("x is less than pr equal to 5")
+# if <boolena condition>: #optional
+# # do something
+#else: #optional
+#  # do something
+
+# - loop through a range of values supplies by the user
+# - for eachvalue in the range
+# - if the value is divisible by 3, prin "fizz"
+# - if the value is divisivle by 5, print "buzz"
+# - if the value is divisible by 3 and 5, print "fizzbuzz"
+
+num = int(input("enter an upper limit:"))
+for i in range(num+1):
+    print("number: ", i)
+    #if not i % 3: 
+    if i % 3 == 0 and i % 5 == 0:
+        print("fizzbuzz")
+      elif i % 3 == 0:
+        print ("fizz")
+        elif i % 5 == 0
+        # else: error
+        print ("buzz")
+
+
+# simon says
+import pygame
+pygame.inint()
+screen = pygame.display.set_mode()
+colors= ["red", "green", "blue", "yellow"]
+random.shuffle(colors)
+for colors in colors:
+    screen.fill(color)
+    pygame.display.fip()
+    pygame.time.wait(1000)
+    screen.fill("black")
+    pygame.disply.flip()
+    pygame.time.wait(250)
+    
+    message = " " 
+    Simon says:
+    Up: RED
+
+    response = input(message)
+    #pygame. EVENT_OBJECT
+    user_sequence = []
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+
+
+
