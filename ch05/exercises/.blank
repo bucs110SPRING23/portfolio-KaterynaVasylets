@@ -1,0 +1,18 @@
+# vending machiens
+print ("welcome to the ending machine")
+code = input("please enter a code: ")
+money = input("Give me money: ")
+
+def my_vending_machine(code, money):
+    if code == "A" :
+        if money
+    
+    
+    def foo(param1, param2):
+        return True
+    def bar(param1=4, param2=3):
+        return param1 + param2
+    foo(1)
+    
+        
+
