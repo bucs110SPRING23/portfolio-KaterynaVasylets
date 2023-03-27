@@ -58,8 +58,9 @@ window.exitonclick()
 pygame.init()
 window = pygame.display.set_mode()
 points=[]
-xpos=0
-ypos=0
+window_size = window.get_size()
+x_pos_offset=window_size[0] / 2
+y_pos_offset=window_size[1] / 2
 
 
 num_sides=int(input("Please enter the number of sides for the shape: "))
@@ -68,14 +69,14 @@ side_length=int(input("please enter the length of each side: "))
 for i in range(num_sides):
     iAngle=360/num_sides
     radians= math.radians(iAngle*i)
-    x= xpos+side_length*math.cos(radians)
-    y= ypos+side_length*math.sin(radians)
+    x= x_pos_offset+side_length*math.cos(radians)
+    y= y_pos_offset+side_length*math.sin(radians)
     points.append([x,y])
     
-    pygame.draw.polygon(window,"red",points,)
-    pygame.display.flip()
-    pygame.time.wait(1500)
+pygame.draw.polygon(window, "red", points)
+pygame.display.flip()
+pygame.time.wait(10000)
 
-    window.fill("white")
-    pygame.display.flip()
+window.fill("white")
+pygame.display.flip()
 
