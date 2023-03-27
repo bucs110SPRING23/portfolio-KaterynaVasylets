@@ -20,4 +20,3 @@ print (power (5,7))
 def square(num):
     return power(num, 2)
 print (square(16))
-
