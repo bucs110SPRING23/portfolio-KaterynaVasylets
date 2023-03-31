@@ -8,8 +8,6 @@ import json
             char = chr(start + new_pos)
         result += char 
     return result
-
-
 def main():
     text = open("encrypted.txt", "r").read()
     shift = 6
@@ -17,6 +15,4 @@ def main():
     fptr = open("ecrypted2.txt", "w")
     fptr.write(text)
     fptr.close()
-
-
-main()
+   main()
