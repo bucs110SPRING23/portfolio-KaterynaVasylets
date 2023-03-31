@@ -1,9 +1,5 @@
 import json
-
-
-
-
-def ceasar_cipher(text, shift): 
+   def ceasar_cipher(text, shift): 
     result = ""
     for char in text: 
         if char.isalpha():
