@@ -1,41 +1,49 @@
-import pygame
-import random
+#Part A 
+
+import pygame 
 import math
+import random
+
+pygame.init()
+sides = 360
+s_length = 250
+xpos = 250
+ypos = 250
+points = [] 
+
 while 1:
-    # PART A
-    pygame.init()
+    window = pygame.display.set_mode(size = (500, 500))
+    pygame.event.get()
+    screensize = pygame.display.get_window_size()
 
-    screen_width=500
-    screen_height=500
-    screen = pygame.display.set_mode([screen_width, screen_height])
-    screen.fill("black")
+    for i in range(sides):
+        angle = 360/sides
+        radians = math.radians(angle * i)
+        x = int(xpos + s_length * math.cos(radians))
+        y = int(ypos + s_length * math.sin(radians))
+        points.append([x,y])
 
-    pygame.draw.circle(screen, (0, 0, 0), (250,250), 250, width=3)
-    pygame.draw.line(screen, "white", (500,-250), (500,250), width=3)
-    pygame.draw.line(screen, "white", (0,250), (500,250), width=3)
+    window.fill("White")
     pygame.display.flip()
-
-    #part B
-
-    for darts in range(10):
-        dart1x = random.randrange(0,500)
-        dart1y = random.randrange(0,500)
-        dart2x = random.randrange(0,500)
-        dart2y = random.randrange(0,500)
-        distance_from_center1 = math.hypot(dart1x-250, dart1y-250)
-        distance_from_center2 = math.hypot(dart2x-250, dart2y-250)
-        is_in_circle1 = (distance_from_center1 <= 250)
-        is_in_circle2 = (distance_from_center2 <= 250)
-        if  is_in_circle1 < 500:
-            pygame.draw.circle(screen, "blue", [dart1x,dart1y], 10)
-        else:
-            pygame.draw.circle(screen, "green", [dart1x,dart1y], 10) 
-            print("wrong", distance_from_center1)
-
-        if  is_in_circle2 < 500:
-            pygame.draw.circle(screen, "blue", [dart2x,dart2y], 10)
-        else:
-            pygame.draw.circle(screen, "green", [dart2x,dart2y], 10) 
-            print("wrong", distance_from_center2)
+    pygame.draw.polygon(window, "Red", points)
     pygame.display.flip()
-    pygame.time.wait(5000)
+    pygame.draw.line(window,"Black",[250,500], [250,0])
+    pygame.display.flip()
+    pygame.draw.line(window,"Black", [0,250], [500,250])
+    pygame.display.flip()
+    pygame.time.wait(2000)
+
+    for x in range(10):
+        a = random.randrange(0,501)
+        b = random.randrange(0,501)
+        distance_from_center = math.hypot(a-250,b-250)
+        is_in_circle = distance_from_center <= 250
+        if is_in_circle == True:
+            pygame.draw.circle(window,"Green", [a,b],10)
+            pygame.display.flip()
+            pygame.time.wait(1000)
+        else:
+            pygame.draw.circle(window,"Blue", [a,b], 10)
+            pygame.display.flip()
+            pygame.time.wait(1000)
+    break
