@@ -5,5 +5,5 @@ class Rectangle:
         self.height = abs(h)
         self.width = abs(w)
     
-    def __str__(self):
+    def __str__(self):s
         return f"(x : (self.x), y: (self.y)) width: (self.width), height: (self.height)"

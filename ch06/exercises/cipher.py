@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The example 
 def caesar_cipher(text, shift):
     """
@@ -21,4 +22,11 @@ def caesar_cipher(text, shift):
         result += char
     return 
 
-
+def main():
+    text = open("encrypted.txt", "r").read()
+    shift = 6
+    ceasar_cipher(text, shift)
+    fptr = open("ecrypted2.txt", "w")
+    fptr.write(text)
+    fptr.close()
+main()
